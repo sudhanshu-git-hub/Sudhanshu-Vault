@@ -19,11 +19,11 @@ int main() {
     // std::string x;
     // std::cin>>a>>b>>x;
     // std::cout<<a<<" "<<b<<" "<<x<<"\n";
-    // printf("Sudhanshu");
+     printf("Sudhanshu");
     // c_func();
     //std::cout<<get_line();
-    freopen("data.txt","r",stdin);
-    freopen("op.txt","w",stdout);
+    // freopen("data.txt","r",stdin);
+    // freopen("op.txt","w",stdout);
 }
 
 

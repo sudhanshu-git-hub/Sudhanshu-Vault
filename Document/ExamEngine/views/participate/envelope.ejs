@@ -1,0 +1,18 @@
+<div class="row sudhanshu-margin">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <div class="d-flex justify-content-center mt-3 mb-5">
+                <i class="far fa-file-alt fa-8x"></i>
+            </div>
+            <h2><%= title %> </h2>
+            <h4>Admin: <%= admin %> </h4>
+            <p>No. of Questions: <%= nquestions %> </p>
+            <%if (participated) { %>
+                <a href="#" class="btn btn-primary disabled btn-block">Already Participated</a>
+            <%  } else{ %>
+                <a href="/participate/<%=documentid%>/<%=paperid%> " class="btn btn-outline-primary btn-block">Participate</a>
+           <% } %>  
+            
+        </div>
+    </div>
+</div>

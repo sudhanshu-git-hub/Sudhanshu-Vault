@@ -1,0 +1,31 @@
+<div class="row sudhanshu-margin">
+    <div class="col-sm-6 m-auto">
+        <div class="card card-body">
+            <h1>Edit</h1>
+            <p>Available Document: <%=document.length%></p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">S.no</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Type</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i = 0; i < document.length; i++) {%>
+                           <tr>
+                            <th scope="row"><%=i+1%></th>
+                            <th scope="row"><%=document[i].title%></th>
+                            <th scope="row" class="text-uppercase"><%=document[i].type%></th>
+                            <th scope="row"><a href="#" class="btn btn-outline-primary btn-block">Edit</a></th>
+                    
+                        </tr>
+                       <% }  %> 
+                        
+                    </tbody>
+                </table>
+        </div>
+        
+    </div>
+</div>

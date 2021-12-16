@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,100;1,400;1,500&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sudhanshu-margin{
+    margin-top: 7em;
+}
+.text-light{
+    color: white;
+}
+
+.navbar-light{
+    border: none;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+
+.btn{
+    margin-top: 0.5em;
+}
+
+.banner{
+    margin-top: 7em;
+    width: 70%;
+}
+.welcome{
+        margin-top: 6em;
+       
+}
+.btn-space{
+    margin-right: 1em;
+}
+.construction{
+    margin: 2em;
+}
+.construction h2{
+    font-weight: bold;
+}
+
+.fa-icon-customizer{
+    color:grey;
+}
+.fa-icon-customizer  :hover{
+    color: black;
+}
+
+hr.hr-text {
+    position: relative;
+      border: none;
+      height: 1px;
+      background: #999;
+  }
+  
+  hr.hr-text::before {
+      content: attr(data-content);
+      display: inline-block;
+      background: #fff;
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: #999;
+      border-radius: 30rem;
+      padding: 0.2rem 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .text-uppercase {
+    letter-spacing: .1em;
+  }
+
+  .answer-correct{
+      color: green;
+  }
+  .answer-wrong{
+      color: red;
+  }
+
+  .welcome-section{
+      padding: 16px;
+  }
+
+  .btn-grad {
+      background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%)
+    }
+    .btn-grad:hover { 
+    background-position: right center; 
+    }
+
+  .btn-grad2 {
+      background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)
+    }
+    .btn-grad2:hover { 
+        background-position: right center; 
+    }
+
+    .btn-grad3 {
+        background-image: linear-gradient(to right, #EB3349 0%, #F45C43 51%, #EB3349 100%)
+    }
+    .btn-grad3:hover {
+         background-position: right center; 
+    }
+
+  @media screen and (min-width: 768px) {
+    
+     .dashboard{
+        padding-top: 7em;
+        padding-bottom: 10em;
+     }
+
+     
+  }
+ 
+
+  
+  

@@ -1,0 +1,36 @@
+<div class="row sudhanshu-margin">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <!-- Paper Header-->
+            <div class="mb-4">
+                <h6 class=" text-uppercase">Question Paper</h6>
+                <h6 class=" text">Paper ID: <%=paperid %> </h6>
+                <!-- Gradient divider -->
+                <hr data-content="<%=title  %> " class="hr-text text-uppercase">
+                <h6 class=" text-uppercase">type: <%=type%> </h6>
+                <h6 class=" text-uppercase">Total number of question:<%=nquestions  %> </h6>
+            </div>
+            <!---Paper Body-->
+            <form action="/participate/<%= documentid %>/<%= paperid %>" method="post">
+                <!---Question Generator-->
+                    <% for(var i=0;i<nquestions;i++){%>
+                        <div class="jumbotron">
+                            <div class="form-group">
+                                <p>Question. <%= i+1 %> </p>
+                                <h4><%=questions[i]%></h4>
+                                <!--Options Generator-->
+                                    <% for (let j = 0; j<4; j++) {%>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio"  id="<%= i %>customRadio<%= j %>" name="UserAnswers<%= i %>" class="custom-control-input" value="<%= j+1 %>" required>
+                                            <label class="custom-control-label" for="<%= i %>customRadio<%= j %>"><%=options[i][j]  %> </label>
+                                     </div>
+                                    <%}  %> 
+                               
+                           </div>
+                       </div>
+                   <% } %> 
+                   <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </form>
+        </div>
+    </div>
+</div>

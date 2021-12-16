@@ -1,0 +1,58 @@
+<div class="row sudhanshu-margin">
+    <div class="col-sm-6 m-auto">
+        <div class="card card-body">
+
+            <div class="d-flex justify-content-center mb-3"> 
+                <h1>Evaluation</h1>
+            </div>
+            
+            <h4>PaperID: <%= paperid%></h4>
+            <p>Participant: <%= email %> </p>
+            <p>Titile: <%= userAnswer[1]%></p>
+            <p>Admin: <%= userAnswer[2]%></p>
+            <p>No. question:<%= correctAnswer.length-1 %>  </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">S.no</th>
+                            <th scope="col">Correct Answer</th>
+                            <th scope="col">Your Answer</th>
+                            <th scope="col">Evaluate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i = 1; i <= correctAnswer.length-1; i++) {%>
+                           <tr>
+                            <th scope="row"><%=i%></th>
+                            <th scope="row"><%=correctAnswer[i]%></th>
+                            <th scope="row" ><%=userAnswer[i+2]%></th>
+                            <!--Sudhanshu Evaluator-->
+                            <th scope="row">
+                                <% if(correctAnswer[i]==userAnswer[i+2]){ %>
+                                    <div class="d-flex justify-content-center"> 
+                                        <i class="fas fa-check-circle answer-correct"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-center"> 
+                                        Correct
+                                    </div>
+                                    <% score++; %> 
+                                <%}else{%> 
+                                    <div class="d-flex justify-content-center"> 
+                                        <i class="fas fa-times-circle answer-wrong"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-center"> 
+                                        Wrong
+                                    </div>
+                               <% }%>
+
+                            </th>
+                        </tr>
+                       <% }  %>
+                    </tbody>
+                </table>
+                <h4>Result</h4>
+                <h1>You Score: <%=score%>/<%= correctAnswer.length-1 %>  </h1>
+        </div>
+        
+    </div>
+</div>

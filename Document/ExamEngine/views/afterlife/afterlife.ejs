@@ -1,0 +1,28 @@
+     <div class="after-life-image-container">
+          <img class="after-life-image" src="../../public/images/afterlife-light.svg" alt="">
+     </div>
+     <div class="after-life-container">
+          <img class="after-life-1" src="../../public/images/afterlife/afterlife-1.svg" alt="">
+          <img class="after-life-2" src="../../public/images/afterlife/afterlife-2.svg" alt="">
+          <img class="after-life-3" src="../../public/images/afterlife/afterlife-3.svg" alt="">
+          
+     </div>
+     <div class="after-life-container-m">
+          <img class="after-life-1-m" src="../../public/images/afterlife-m/after-life-1-m.svg" alt="">
+          <img class="after-life-2-m" src="../../public/images/afterlife-m/after-life-2-m.svg" alt="">
+          <img class="after-life-3-m" src="../../public/images/afterlife-m/after-life-3-m.svg" alt="">
+     </div>
+    
+<script>
+document.getElementById('navbar').style.visibility="hidden";
+
+gsap.from('.after-life-image',{opacity:0,duration:8,ease:"bounce.out",delay:4});
+
+gsap.from('.after-life-1',{duration:2,y:15});
+gsap.from('.after-life-2',{duration:2,y:-150});
+gsap.from('.after-life-3',{duration:4,y:190});
+
+gsap.from('.after-life-1-m',{duration:2,y:5});
+gsap.from('.after-life-2-m',{opacity:0,duration:2,y:-50,delay:2});
+gsap.from('.after-life-3-m',{duration:2,y:90,delay:2});
+</script>

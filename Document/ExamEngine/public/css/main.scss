@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap');
+
+.lines{
+    height: 0;
+    visibility: hidden;
+}
+
+.center{
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:  translate(-50%, -50%);
+    
+}
+.afterlife-line{
+    font-family: 'MuseoModerno', cursive;
+}
+.fa-whatsapp{
+    color: #18bc65;
+}
+.whatsapp{
+    margin-top: 1em;
+}
+.whats{
+    font-weight: 100;
+}
+.btn-send-whatsapp{
+    padding: 1em 2em 1em 2em;
+    color: #18bc65;
+    border-radius: 2em;
+    border-color: #18bc65;
+}
+.btn-send-whatsapp:hover{
+    background-color:  #18bc65;
+}
+.btn-send-whatsapp:focus{
+    background-color:  #18bc65;
+}
+.contact-uname{
+    border-radius: 2em;
+    font-size: 1em;
+    width: 20em;
+    padding: 1em;
+    border-width: 0.01em;
+    border-color: gray;
+    margin-top:4em;
+    
+}
+.contact-umessage{
+    border-radius: 2em;
+    font-size: 1em;
+    width: 20em;
+    height: 10em;
+    padding: 1em;
+    border-width: 0.01em;
+    border-color: gray;
+    margin: 4em;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media screen and (min-width: 768px) {
+    .navbar{
+       margin: 0 8px 0 8px;
+    }
+   .logo{
+       width: 32%;
+   }
+   .prelude{
+       font-size: 3em;
+       font-weight: bold;
+   }
+   .after-life-bottom{
+    width: 96px;
+    }
+
+    .after-life-image-container{
+        z-index: 2;
+        position: relative;
+        
+    img{
+        position: absolute;
+        width: 40%;
+        transform: translate(70%,50%);
+        }
+    }
+
+    .after-life-container-m{
+        position: relative;
+        visibility: hidden;
+        height: 0;
+        img{
+            visibility: hidden;
+            height: 0;
+        }
+    }
+    .after-life-container{
+        position: relative;
+    }
+    .after-life-1{
+        position: absolute;
+        z-index: -2;
+    }
+    .after-life-2{
+        z-index: -1;
+        position: absolute;
+        padding-top: 90px;
+    }
+    .after-life-3{
+        padding-top: 508px;
+    }
+    
+}
+
+@media screen and (max-width:414px){
+    .navbar{
+        margin: 0 4px 0 4px;
+    }
+    .prelude{
+        font-size:1.2em;
+        font-weight: bold;
+    }
+    .center{
+        width: 70%;
+    }
+    .welcome{
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+    .app-intro{
+        font-size: 0.8em;
+    }
+    .lines{
+        visibility: visible;;
+    }
+    #line1{
+        height: 16vh;
+        transform: translateY(-16%);
+    }
+    #line2{
+        height: 25vh;
+        transform: translateY(-16%);
+    }
+    #line3{
+        height: 20vh;
+        transform: translateY(-16%);
+    }
+    #line4{
+        height: 30vh;
+        transform: translateY(-16%);
+    }
+    .logo{
+        width: 64px;
+       
+    }
+    .after-life-bottom{
+        width: 64px;
+    }
+    
+    .user-name{
+        padding-top: 4em;
+    }
+    .after-life-image-container{
+        z-index: 1;
+        position: relative;
+        
+    img{
+        position: absolute;
+        width: 60%;
+        transform: translate(37%, 150%);
+        }
+    }
+    
+    .after-life-container{
+        position: relative;
+        visibility: hidden;
+        height: 0;
+        img{
+            visibility: hidden;
+            height: 0;
+        }
+    }
+    .after-life-1-m{
+        position: absolute;
+        z-index: -2;
+    }
+    .after-life-2-m{
+        position: absolute;
+        z-index: -1;
+        padding-top: 146px;
+    }
+    .after-life-3-m{
+        padding-top: 2em;
+        padding-top: 632px;
+    }
+}

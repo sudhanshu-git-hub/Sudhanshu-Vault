@@ -1,0 +1,83 @@
+<div class="row sudhanshu-margin">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <div class="mb-4">
+                <h6 class=" text-uppercase">Question Paper</h6>
+                <h6 class=" text">Document ID: <%=id %> </h6>
+                <!-- Gradient divider -->
+                <hr data-content="<%=title  %> " class="hr-text text-uppercase">
+                <h6 class=" text-uppercase">type: <%=type%> </h6>
+                <h6 class=" text-uppercase">Total number of question:<%=nquestions  %> </h6>
+            </div>
+            <form action="/create/edit/<%=nquestions%>/<%=id%>" method="POST">
+            <!---Question Generator-->
+            <% for(var i=1;i<=nquestions ;i++){%>
+                <div class="jumbotron">
+                  <div class="form-group">
+                   <label for="<%=i%>questions"><%=i%>. Question</label>
+                   <input
+                     type="text"
+                     id="<%=i%>questions"
+                     name="questions"
+                     class="form-control"
+                     placeholder="Enter the Question"
+                     required
+                   />
+                   
+                   <div class="mt-4"></div>
+                   <label for="<%=i%>options">Option 1</label>
+                   <input
+                     type="text"
+                     id="<%=i%>options"
+                     name="options"
+                     class="form-control"
+                     placeholder="Enter the Option"
+                     required
+                   />
+                   <label for="<%=i%>options">Option 2</label>
+                   <input
+                     type="text"
+                     id="<%=i%>options"
+                     name="options"
+                     class="form-control"
+                     placeholder="Enter the Option"
+                     required
+                   />
+                   <label for="<%=i%>options">Option 3</label>
+                   <input
+                     type="text"
+                     id="<%=i%>options"
+                     name="options"
+                     class="form-control"
+                     placeholder="Enter the Option"
+                     required
+                   />
+                   <label for="<%=i%>options">Option 4</label>
+                   <input
+                     type="text"
+                     id="<%=i%>options"
+                     name="options"
+                     class="form-control"
+                     placeholder="Enter the Option" 
+                     required
+                   />
+                   <label for="<%=i%>answers" class="mt-5">Answer</label>
+                   <input
+                     type="number"
+                     id="<%=i%>answers"
+                     name="answers"
+                     class="form-control"
+                     placeholder="Select the answer"
+                     min="1"
+                     max="4"
+                     required
+                   />
+                 </div>
+               </div> 
+              <%} %> 
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

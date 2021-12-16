@@ -1,0 +1,98 @@
+<div class="container-fluid welcome-section">
+    <div class="lines d-flex justify-content-between">
+        <img id="line1" src="/public/images/lines/line1.svg" alt="">
+        <img id="line4" src="/public/images/lines/line4.svg" alt="">
+        <img id="line3" src="/public/images/lines/line3.svg" alt="">
+        <img id="line2" src="/public/images/lines/line2.svg" alt="">
+    </div>
+    <div class="center">
+        <p class="prelude" id="welcome">"Don't stop until you're proud."</p>
+        <button type="button" class="btn btn-outline-primary btn-block startButton" id ="startButton" onclick="startEngine()">Start Engine</button>
+    </div>
+    <section >
+    <div class="row welcome-content" id="welcomeContent">
+        <div class="col-md-6 d-flex justify-content-center">
+            <img class="banner" src="../public/images/laptop.svg" alt="">
+        </div>
+        <div class="col-md-6 ">
+            <div class="row d-flex justify-content-center ">
+                <h1 class="welcome" id="sayHello">नमस्ते!</h1>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <p class="app-intro">ExamEngine provide a
+                    fast-free-easy way to organize exam </p>
+            </div>
+            <div class="row">
+               <div class="col-md d-flex justify-content-end d-flex justify-content-center">
+                <a href="/users/login">
+                    <button type="button" class="btn btn-primary btn-space">Login</button>
+                </a>
+                <a href="/users/register">
+                    <button type="button" class="btn btn-outline-primary btn-space">Register</button>
+                </a>
+                
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<script>
+    function startEngine(){
+        gsap.to('.prelude',{opacity:0,duration:0, ease: SteppedEase.config(1212)});
+        gsap.to('.startButton',{opacity:0,duration:0});
+        document.getElementById("welcome").style.visibility="hidden";
+        document.getElementById("startButton").style.visibility="hidden";
+        //Lines
+        document.getElementById("line1").style.visibility="hidden";
+        document.getElementById("line2").style.visibility="hidden";
+        document.getElementById("line3").style.visibility="hidden";
+        document.getElementById("line4").style.visibility="hidden";
+
+        document.getElementById("line1").style.height="0";
+        document.getElementById("line2").style.height="0";
+        document.getElementById("line3").style.height="0";
+        document.getElementById("line4").style.height="0";
+
+
+        document.getElementById("welcomeContent").style.visibility="visible";
+        document.getElementById("navbar").style.visibility="visible";
+        
+        gsap.from('.navbar',{opacity:0,duration:2,y:-50});
+        gsap.from('.container-fluid',{opacity:0,duration:2,y:50,delay:2});
+        gsap.from('.banner',{opacity:0,duration:2,x:-50,delay:2});
+        gsap.from('.welcome',{opacity:0,duration:1,x:50,delay:2});
+
+        greetUser();
+    }
+
+    document.getElementById("welcomeContent").style.visibility="hidden";
+    document.getElementById("navbar").style.visibility="hidden";
+
+    //Line Animation
+    gsap.from('#line1',{duration:3,y:-160,ease:Power1.easeOut});
+    gsap.from('#line2',{duration:8,y:-150,ease:Power2.easeOut});
+    gsap.from('#line3',{duration:2,y:-220,ease:Power4.easeOut});
+    gsap.from('#line4',{duration:3,y:-200,ease:Power3.easeOut});
+
+    //Engine Ignition
+    gsap.from('.prelude',{opacity:0,duration:2,y:-50, ease: SteppedEase.config(1212),delay:3});
+    gsap.from('.startButton',{opacity:0,duration:1,delay:5});
+    
+    let hello =['नमस्ते!','Hi!','أسلم عليكم','Salut!','안녕!','Привет!',"Hola!","Ciao!","Qué Tal!","Hallo","Chào"];
+    function greetUser(){
+        let i=0;
+        setInterval(() => {
+            document.getElementById('sayHello').innerText = hello[i];
+            i++;
+            if(i==hello.length){
+                i=0;
+            }
+        },2000);
+    };
+    
+    
+    
+
+
+</script>

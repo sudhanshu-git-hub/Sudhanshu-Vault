@@ -1,6 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+   font-family: 'Poppins', sans-serif;
+}
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.loader-sub-message{
+    font-size:0.8em;
+}
+.transcript-box {
+    background: #ffffff;
+    border-radius: 2em;
+    padding: 2em;
+}
+.summary-box {
+  background: #ededed;
+  border-radius: 2em;
+  padding: 2em;
+}
+.margin-2{
+  margin: 2em;
+}
+.margin-4{
+  margin: 4em;
+}
+.margin-6{
+  margin: 6em;
+}
+.round-corner-2{
+    border-radius: 2em;
+}
+.thumbnail{
+
+}
+.youtube-url-input{
+   width: 90%;
+    height: 2em;
+    padding-left: 2em;
+    font-size: 1em;
+}
+.summerize-btn{
+    width: 80%;
+    height: 2em;
+    border-radius: 2em;
+    font-size: 1.2em;
+}
+.logo{
+    width:50em;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

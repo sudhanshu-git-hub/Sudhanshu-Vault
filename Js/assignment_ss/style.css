@@ -1,0 +1,63 @@
+
+.row{
+    margin: 1.2em;
+}
+.table-description{
+    width: 80%;
+}
+table, th, td {
+    border: 1px solid rgb(167, 201, 63);
+}
+th{
+    background: rgb(167, 201, 63);
+    color: white;
+}
+.tab-name{
+    font-weight: bold;
+}
+.tab-image{
+    width: 80%;
+}
+.image-div{
+    display: flex;
+    justify-content: center;
+}
+footer,header{
+    background-color: rgb(25, 214, 158);
+    color: white;
+    text-align: center;
+}
+.m-4{
+    margin: 4em;
+}
+.center{
+    text-align: center;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.line{
+    padding: 28px;
+}
+.row-even{
+    background-color: rgb(235, 242, 211);
+}
+tr{
+    animation: fadeIn 2s ;
+}
+@media only screen and (max-width: 767px) {
+    .line {
+        border-bottom: 6px solid rgb(25, 214, 158);
+    }
+  }
+@media only screen and (min-width: 768px) {
+    .line {
+        border-right: 6px solid rgb(25, 214, 158);
+    }
+  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

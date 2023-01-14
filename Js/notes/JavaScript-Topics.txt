@@ -1,0 +1,3 @@
+Hoisting(why let or var)
+Data In/out(array and object handling)
+Lexical Scoping(arrow function)
